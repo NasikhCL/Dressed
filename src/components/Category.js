@@ -50,18 +50,20 @@ export default function Category() {
            
         </div>
         <Modal open={open} onClose={onCloseModal} center>
-         <div className='flex p-6'>
-            <div className='mx-1 w-60 h-72 cursor-pointer  '>
-                <Link to={`/${currentCategory}/lists`} >
-                    <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-blue-900 hover:opacity-75' src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
-                    <h2 className='text-center text-2xl font-bold text-blue-900'>Men</h2>
-                </Link>
+            <div className='flex justify-center py-6'>
+                <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
+                    <Link to={`/${currentCategory}/lists`} >
+                        <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-blue-900 hover:opacity-75' src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
+                        <h2 className='text-center text-2xl font-bold text-blue-900'>Men</h2>
+                    </Link>
+                </div>
+                <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
+                    <Link to={`/${currentCategory}/lists`} >
+                        <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-gray-400 hover:opacity-50' src='https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
+                        <h2 className='text-center text-2xl font-bold text-blue-900'>Women</h2>
+                    </Link>
+                </div> 
             </div>
-            <div className='mx-1 w-60 h-72 cursor-pointer  '>
-                <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-gray-400 hover:opacity-50' src='https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
-                <h2 className='text-center text-2xl font-bold text-blue-900'>Women</h2>
-            </div> 
-         </div>
          
         </Modal>
     </div>

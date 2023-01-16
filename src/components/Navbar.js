@@ -33,6 +33,9 @@ export const Navbar = () => {
             
             
             <div className='hidden lg:visible lg:flex items-center relative  px-2'>
+                <div className='mr-5'>
+                    Favourites
+                </div>
                 <input placeholder='Search...' className='pl-2 rounded-xl' />
                 <div className='absolute right-4 cursor-pointer'>
                     <i className="fa-solid fa-magnifying-glass"></i>
@@ -53,17 +56,18 @@ export const Navbar = () => {
     
         <ul className={isHambListVisible ?'text-blue-900 pb-3 lg:hidden' : 'text-blue-900 pb-3 hidden' }>
             <li className='block px-3 my-3 hover:bg-gray-200 '>Home</li>
+            <li className='block px-3 my-3 hover:bg-gray-200 '>Favourites</li>
             <li className='block px-3 my-3 hover:bg-gray-200 '>Category</li>
             <li className='block px-3 my-3 hover:bg-gray-200 '>About Us</li>
             <li className='block px-3 my-3 hover:bg-gray-200 '>Contact Us</li>
+            <div className=' lg:hidden lg:flex w-fit items-center relative mx-auto py-2 '>
+                    <input placeholder='Search...' className='pl-2 rounded-xl border' />
+                    <div className='absolute right-4 top-2 cursor-pointer'>
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    
+            </div>
         </ul>
-        <div className=' lg:hidden lg:flex w-fit items-center relative mx-auto py-2 '>
-                <input placeholder='Search...' className='pl-2 rounded-xl border' />
-                <div className='absolute right-4 top-2 cursor-pointer'>
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                </div>
-                
-        </div>
     </div>
   )
 }
