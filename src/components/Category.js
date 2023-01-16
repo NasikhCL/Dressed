@@ -52,7 +52,7 @@ export default function Category() {
         <Modal open={open} onClose={onCloseModal} center>
             <div className='flex justify-center py-6'>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
-                    <Link to={`/${currentCategory}/lists`} >
+                    <Link to={`/category/lists`} >
                         <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-blue-900 hover:opacity-75' src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
                         <h2 className='text-center text-2xl font-bold text-blue-900'>Men</h2>
                     </Link>
