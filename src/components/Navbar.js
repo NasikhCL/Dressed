@@ -7,7 +7,7 @@ export const Navbar = () => {
        setIsHambListVisbile(prevState=> !prevState)
     }
   return (
-    <div className=' sticky top-0' style={{zIndex:'100'}}>
+    <div className=' sticky top-0 bg-blue-100' style={{zIndex:'100'}}>
 
         <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-blue-900 color flex items-center justify-between'>
             <div className='flex items-center '>
