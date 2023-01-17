@@ -58,7 +58,7 @@ export default function Category() {
                     </Link>
                 </div>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
-                    <Link to={`/${currentCategory}/lists`} >
+                    <Link to={`/category/lists`} >
                         <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-gray-400 hover:opacity-50' src='https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
                         <h2 className='text-center text-2xl font-bold text-blue-900'>Women</h2>
                     </Link>
