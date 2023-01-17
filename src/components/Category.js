@@ -17,9 +17,9 @@ export default function Category() {
     } 
   
   return (
-    <div className='my-7 text-blue-900'>
+    <div id='category' className='my-7 pt-7 text-blue-900 bg-gray-100'>
         <h1 id='category' className='text-2xl font-bold mb-5 px-7'>Category</h1>
-        <div className='flex flex-wrap items-center justify-evenly w-full h-auto p-7'>
+        <div className='flex flex-wrap items-center justify-evenly w-full p-7'>
             {/* <Link  to='/category' onClick={onOpenModal} className='flex flex-col items-center w-2/12 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '> */}
                 <div onClick={()=> onOpenModal('marrige-dress')} className='flex flex-col items-center w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '>
                     <div className='h-80 w-full' >

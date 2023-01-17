@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <div className=' sticky top-0 bg-blue-100' style={{zIndex:'100'}}>
 
-        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-blue-900 color flex items-center justify-between'>
+        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-black color flex items-center justify-between'>
             <div className='flex items-center '>
                 <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
                 <h4 className="font-bold">Lets Get Dressed</h4>
@@ -17,12 +17,12 @@ export const Navbar = () => {
             <ul className='flex '>
                 <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer'>Home</li>
                 <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group '>
-                    Category
+                   <a href='#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-3 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300'>
-                        <li className='bg-blue-300 hover:bg-gray-200 p-2'>Marrige Dress</li>
-                        <li className='bg-blue-300 hover:bg-gray-200 p-2'>Anniversary Dress</li>
-                        <li className='bg-blue-300 hover:bg-gray-200 p-2'>Birthday Dress</li>
-                        <li className='bg-blue-300 hover:bg-gray-200 p-2'>College Fest Dress</li>
+                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2'>Marrige Dress</li>
+                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2'>Anniversary Dress</li>
+                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2'>Birthday Dress</li>
+                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2'>College Fest Dress</li>
                     </ul>
                 </li>
 
