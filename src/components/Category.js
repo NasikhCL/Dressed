@@ -4,16 +4,18 @@ import { Modal } from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
 
 export default function Category() { 
-    const[currentCategory, setCurrentCategory] = useState('')
+
+    // const[currentCategory, setCurrentCategory] = useState('')
+    
     const [open, setOpen] = useState(false);
 
     const onOpenModal = (cat) => {
-        setCurrentCategory(cat)
+        // setCurrentCategory(cat)
         setOpen(true);
     }
     const onCloseModal = () =>{
         setOpen(false);
-        setCurrentCategory('')
+        // setCurrentCategory('')
     } 
   
   return (
