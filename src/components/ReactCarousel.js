@@ -4,11 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 
 export default function ReactCarousel() {
   return (
-    <div className='-z-10'>
-      
-         
-    
-      <Carousel className='cursor-pointer -z-10 '  autoPlay showThumbs={false} centerMode={false} infiniteLoop  showStatus={false}>
+
+      <Carousel className='cursor-pointer -z-10'  autoPlay showThumbs={false} centerMode={false} infiniteLoop  showStatus={false}>
         <div className=' bg-cyan-200' style={{height:"520px"}}> 
           <img className='object-cover h-full' src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='carousel'/>
           <p className="legend">Get Dressed Well</p>
@@ -25,9 +22,8 @@ export default function ReactCarousel() {
           <img className='h-full ' src="https://images.pexels.com/photos/165505/pexels-photo-165505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='carousel' />
           <p className="legend">Save your Date</p>
         </div>
-        
-                  
-        </Carousel>
-    </div>
+                
+      </Carousel>
+
   )
 }

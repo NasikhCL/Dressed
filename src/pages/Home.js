@@ -16,6 +16,7 @@ export default function Home() {
         <ReactCarousel />
         <Category />
         <Footer />
+        {/* <div className='w-full h-[900px] bg-blue-900'></div> */}
       
 
         

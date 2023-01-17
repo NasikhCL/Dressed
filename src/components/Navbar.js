@@ -7,9 +7,9 @@ export const Navbar = () => {
        setIsHambListVisbile(prevState=> !prevState)
     }
   return (
-    <div className={isHambListVisible ? 'bg-blue-200' : 'z-70 sticky top-0'}>
+    <div className=' sticky top-0' style={{zIndex:'100'}}>
 
-        <nav className='w-100 h-14 z-60 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-blue-900 color flex items-center justify-between'>
+        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-blue-900 color flex items-center justify-between'>
             <div className='flex items-center '>
                 <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
                 <h4 className="font-bold">Lets Get Dressed</h4>
