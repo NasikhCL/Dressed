@@ -119,7 +119,7 @@ export const Navbar = () => {
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={handleHamb}>Favourites</li>
             {/* <li className='block px-3 my-3 hover:bg-gray-200 '>Category</li> */}
             <li className='block px-3 hover:bg-gray-200 relative group ' onClick={handleHamb}> 
-                   <a href='#category' onClick={handleHamb}>Category</a>
+                   <a href='#category' >Category</a>
                     {/* <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-7 border group-hover:transition-all group-hover:duration-300 z-10' >
                         <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
                         <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
