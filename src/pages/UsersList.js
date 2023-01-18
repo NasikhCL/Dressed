@@ -9,8 +9,8 @@ export default function UsersList() {
 
   return ( 
     <>
-        <Navbar />
-        <CardList gender={params.gender} categoryName={params.categoryName} />
+        {/* <Navbar /> */}
+        <CardList  />
     </>
   )
 } 

@@ -29,7 +29,19 @@ export const Navbar = () => {
         // })
 
     // }
+    const [searchQuery, setSearchQuery] = useState('')
 
+    const handleSearchQuery = (e)=>{
+        const{value} = e.target
+        setSearchQuery(value)
+        // console.log(searchQuery)
+    }
+    console.log(searchQuery);
+
+    const handleSearch = ()=>{
+        console.log(searchQuery)
+        navigate(`/searchResults/${searchQuery}`)
+    }
     const[isHambListVisible,setIsHambListVisbile] =useState(false)
 
     const[currentCategory, setCurrentCategory] = useState('')
@@ -38,6 +50,7 @@ export const Navbar = () => {
 
     const onOpenModal = (cat) => {
         setCurrentCategory(cat)
+        setIsHambListVisbile(false)
         setOpen(true);
     }
 
@@ -81,10 +94,12 @@ export const Navbar = () => {
                 <div className='mr-5'>
                     Favourites
                 </div>
-                <input placeholder='Search...' className='pl-2 rounded-xl' />
-                <div className='absolute right-4 cursor-pointer'>
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl' value={searchQuery} onChange={handleSearchQuery}/>
+                <Link  className='absolute right-4 cursor-pointer'  to={`/searchResults/${searchQuery}`}>
+                    {/* <div className='absolute right-4 cursor-pointer' > */}
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    {/* </div> */}
+                </Link>
                 {/* <div className='mx-5'>Register</div>
                 <div className='mx-5'>Login</div>
                 <div className='relative mx-5'>
@@ -119,8 +134,8 @@ export const Navbar = () => {
                 <a href='#contact-us' onClick={handleHamb}>Contact Us</a>
             </li>
             <div className=' lg:hidden lg:flex w-fit items-center relative mx-auto py-2 '>
-                    <input placeholder='Search...' className='pl-2 rounded-xl border' />
-                    <div className='absolute right-4 top-2 cursor-pointer'>
+                    <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />
+                    <div onClick={handleSearch} className='absolute right-4 top-2 cursor-pointer'>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
                     
