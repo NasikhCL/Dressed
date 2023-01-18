@@ -10,15 +10,16 @@ import { collection, getDocs, where, query } from "firebase/firestore";
 
 export default function CardList(props) {
 
-  const qGender = props.gender
-  console.log(qGender)
+  const paramsGender = props.gender
+  const paramsCategoryName = props.categoryName
+  // console.log(qGender)
    
   const [isComplete, setIsComplete] = useState(false)
   const [ourUsers, setOurUsers] = useState([])
   // console.log(ourUsers)
   
   const fetchData = async()=>{
-      const q = query(collection(db, "users"), where("gender", "==", qGender));
+      const q = query(collection(db, "users"), where("gender", "==", paramsGender ), where("category", "==", paramsCategoryName ));
       const querySnapshot = await getDocs(q) 
       // console.log(querySnapshot)
       querySnapshot.forEach((doc) => {
@@ -49,16 +50,18 @@ export default function CardList(props) {
 
 
   return (
-    <div className='5/6 flex justify-evenly flex-wrap'>
-      {
-        isComplete ? ourUsers.map((user,index) => {
-          // console.log(user)
-          return( <Card key={index} userData={user} /> )
-        })
-     : <h1>Loading ...</h1>
-      }
-     
-        
+    <div>
+      
+      <h2>{paramsCategoryName}</h2>
+      <div className='w-5/6 mx-auto flex justify-evenly flex-wrap'>
+        {
+          isComplete ? ourUsers.map((user,index) => {
+            // console.log(user)
+            return( <Card key={index} userData={user} /> )
+          })
+          : <h1>Loading ...</h1>
+        }
     </div>
+  </div>
   )
 }
