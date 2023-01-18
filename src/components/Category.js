@@ -3,16 +3,18 @@ import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
 
+
 export default function Category() { 
 
     const[currentCategory, setCurrentCategory] = useState('')
-    
     const [open, setOpen] = useState(false);
+   
 
     const onOpenModal = (cat) => {
         setCurrentCategory(cat)
         setOpen(true);
     }
+    
     const onCloseModal = () =>{
         setOpen(false);
         setCurrentCategory('')
@@ -51,7 +53,7 @@ export default function Category() {
             
             
         </div>
-        <Modal open={open} onClose={onCloseModal} center>
+        {open && <Modal open={open} onClose={onCloseModal} center>
             <div className='flex justify-center py-6'>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
                     <Link to={`/category/male/${currentCategory}`} >
@@ -67,7 +69,7 @@ export default function Category() {
                 </div> 
             </div>
          
-        </Modal>
+        </Modal>}
     </div>
   )
 }
