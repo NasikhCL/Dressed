@@ -1,7 +1,29 @@
 import React, { useState } from 'react'
-
 import TBC from '../images/TBC.png';
+// import {db} from '../config/firebase'
+// import userDatas from '../userDatas'
+// import { 
+//     collection,
+//     addDoc
+// } from 'firebase/firestore'
+
 export const Navbar = () => {
+    // const addDatas = async()=>{
+
+        // userDatas.forEach( async(user) => {
+        
+        //     try {
+        //         const docRef = await addDoc(collection(db, "users"), {...user});
+        //         console.log("Document written with ID: ", docRef.id);
+        //     } catch (e) {
+        //         console.error("Error adding document: ", e);
+        //     }
+    
+          
+        // })
+
+    // }
+    
     const[isHambListVisible,setIsHambListVisbile] =useState(false)
     const handleHamb =()=>{
        setIsHambListVisbile(prevState=> !prevState)
@@ -15,7 +37,7 @@ export const Navbar = () => {
                 <h4 className="font-bold">Lets Get Dressed</h4>
             </div>
             <ul className='flex '>
-                <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer'>Home</li>
+                <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer' >Home</li>
                 <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group '>
                    <a href='#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-3 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300'>

@@ -1,5 +1,4 @@
-{
-    user:[
+const userDatas = [
         {
             id: 1,
             gender: "male",
@@ -401,5 +400,6 @@
         
         }
     ]
-}
 
+
+export default userDatas

@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 
 export default function Category() { 
 
-    // const[currentCategory, setCurrentCategory] = useState('')
+    const[currentCategory, setCurrentCategory] = useState('')
     
     const [open, setOpen] = useState(false);
 
     const onOpenModal = (cat) => {
-        // setCurrentCategory(cat)
+        setCurrentCategory(cat)
         setOpen(true);
     }
     const onCloseModal = () =>{
         setOpen(false);
-        // setCurrentCategory('')
+        setCurrentCategory('')
     } 
   
   return (
@@ -49,18 +49,18 @@ export default function Category() {
                 <h4 className='font-bold text-xl'>College Fest Dress</h4>
             </div>
             
-           
+            
         </div>
         <Modal open={open} onClose={onCloseModal} center>
             <div className='flex justify-center py-6'>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
-                    <Link to={`/category/lists`} >
+                    <Link to={`/category/male/${currentCategory}`} >
                         <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-blue-900 hover:opacity-75' src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
                         <h2 className='text-center text-2xl font-bold text-blue-900'>Men</h2>
                     </Link>
                 </div>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer  '>
-                    <Link to={`/category/lists`} >
+                    <Link to={`/category/female/${currentCategory}`} >
                         <img className='transition-all duration-200 w-full h-full rounded-xl hover:bg-gray-400 hover:opacity-50' src='https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='male' />
                         <h2 className='text-center text-2xl font-bold text-blue-900'>Women</h2>
                     </Link>
