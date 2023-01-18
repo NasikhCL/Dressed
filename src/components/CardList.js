@@ -48,7 +48,7 @@ export default function CardList() {
     
         querySnapshot.forEach((doc) => {
           if(params.searchQuery){ 
-            if(doc.data().title.includes(params.searchQuery)){
+            if(doc.data().title.includes(params.searchQuery.toLocaleLowerCase())){
               setOurUsers((prevData) => [...prevData, doc.data()]);
             }
 
