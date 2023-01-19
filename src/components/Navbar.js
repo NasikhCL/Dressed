@@ -91,7 +91,7 @@ export const Navbar = () => {
             
             
             <div className='hidden lg:visible lg:flex items-center relative  px-2'>
-                <div className='mr-5 text-2xl ' >
+                <div className='mr-5 text-2xl ' onClick={()=> navigate('/favourites')} >
                 <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
                 <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>

@@ -1,5 +1,17 @@
 .zoom-in-out-box {
-    animation: zoom-in-zoom-out 10s ease infinite;
+    height: 590px;
+
+}
+@media screen and (max-width: 520px){
+    .zoom-in-out-box {
+        height: 300px;
+    
+    } 
+}
+.zoom-in-out-box img{
+    animation: zoom-in-zoom-out 11s ease infinite;
+    height:100%
+  
 
   }
   

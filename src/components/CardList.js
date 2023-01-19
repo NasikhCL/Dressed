@@ -77,17 +77,17 @@ export default function CardList() {
   return (
     <div>
       <div className='w-full mt-4 border rounded-3xl px-7 h-14  flex justify-between items-center'>
-        <div onClick={()=> navigate('/')}><i class="fa-solid fa-house"></i></div>
-        <div>filter</div>
+        <div className='cursor-pointer' onClick={()=> navigate('/')}><i className="fa-solid fa-angle-left"></i></div>
+        <div className='cursor-pointer' onClick={()=> navigate('/')}><i className="fa-solid fa-house"></i></div>
         <div>right</div>
       </div>
       
       <h2 className='ml-7 mt-7 text-2xl '>{CategoryName ? `${CategoryName}` : 'Search Results' }</h2>
       <div className='w-5/6 mx-auto flex justify-evenly flex-wrap'>
         {
-          isComplete ?(ourUsers.length>0 ? ourUsers.map((user,index) => {
+          isComplete ?( ourUsers.length > 0 ? ourUsers.map((user,index) => {
             // console.log(user)
-            return( <Card key={index} userData={user} /> )
+            return( <Card key={user.id} userData={user} /> )
           }) : <h1>No Results Found ...</h1>
           ): <h1>Loading ...</h1>
         }
