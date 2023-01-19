@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function AboutUs() {
   return (
-    <div id='about-us' className='h-fit lg:h-[500px]  '>
-        <h1 className='text-2xl font-bold mb-5 px-7 mt-14 mb-14'>About Us</h1>
+    <div  className='h-fit '>
+        <h1 id='about-us' className='text-2xl font-bold mb-5 px-7 pt-16 pb-14'>About Us</h1>
         <div  className='flex  flex-col lg:flex-row justify-between items-center '>
             <div className='flex justify-center items-center w-full lg:w-2/4 mb-7'>
                 <img className='w-32 md:w-64' src='https://cdn.shopify.com/s/files/1/0609/2102/0609/files/grp_image_2_750x.jpg?v=1650647980' />
