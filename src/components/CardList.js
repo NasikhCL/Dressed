@@ -14,7 +14,7 @@ export default function CardList() {
   const navigate = useNavigate() 
 // console.log(params)
 //   const paramsGender = props.gender
-  const CategoryName = params.categoryName.substr(0, params.categoryName.indexOf("-"));
+  const CategoryName = params.categoryName
   // console.log(categoryName)
   console.log(params)
    
@@ -83,7 +83,7 @@ export default function CardList() {
         
       </div>
       
-      <h2 className='ml-7 mt-7 text-2xl font-bold'>{CategoryName ? `${CategoryName} Outfits (${params.gender})` : 'Search Results' }</h2>
+      <h2 className='ml-7 mt-7 text-2xl font-bold'>{CategoryName ? `${params.categoryName.substr(0, params.categoryName.indexOf("-"))} Outfits (${params.gender})` : 'Search Results' }</h2>
       <div className='w-5/6 mx-auto flex justify-evenly flex-wrap'>
         {
           isComplete ?( ourUsers.length > 0 ? ourUsers.map((user,index) => {
