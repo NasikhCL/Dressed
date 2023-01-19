@@ -65,41 +65,41 @@ export const Navbar = () => {
        setIsHambListVisbile(prevState=> !prevState)
     }
   return (
-    <div className=' sticky top-0 bg-blue-100' style={{zIndex:'100'}}>
+    <div className=' sticky top-0 bg-white text-black font-medium' style={{zIndex:'100'}}>
 
-        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-blue-100  bg-blue-200 text-black color flex items-center justify-between'>
+        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-gay-400 text-black flex items-center justify-between'>
             <div className='flex items-center '>
                 <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
                 <h4 className="font-bold">Lets Get Dressed</h4> 
             </div>
             <ul className='flex '>
-                <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer' onClick={()=> navigate('/')}>Home</li>
+                <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer' onClick={()=> navigate('/')}><a href='#home'>Home</a></li>
                 <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group ' onClick={handleHamb}> 
                    <a href='#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300 '>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('birthday-dress')}>Birthday Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('birthday-dress')}>Birthday Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
                     </ul>
                 </li>
 
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'>Contact Us</li>
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'>About Us</li>
+                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#contact-us'>Contact Us</a></li>
+                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#about-us'>About Us</a></li>
             </ul>
             
             
             
             <div className='hidden lg:visible lg:flex items-center relative  px-2'>
-                <div className='mr-5'>
-                    Favourites
+                <div className='mr-5 text-2xl ' >
+                <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
-                <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl' value={searchQuery} onChange={handleSearchQuery}/>
-                <Link  className='absolute right-4 cursor-pointer'  to={`/searchResults/${searchQuery}`}>
-                    {/* <div className='absolute right-4 cursor-pointer' > */}
+                <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
+                {/* <Link  className='absolute right-4 cursor-pointer'  to={`/searchResults/${searchQuery}`}> */}
+                    <div className='absolute right-4 cursor-pointer' onClick={handleSearch} >
                         <i className="fa-solid fa-magnifying-glass"></i>
-                    {/* </div> */}
-                </Link>
+                    </div>
+                {/* </Link> */} 
                 {/* <div className='mx-5'>Register</div>
                 <div className='mx-5'>Login</div>
                 <div className='relative mx-5'>
@@ -109,7 +109,7 @@ export const Navbar = () => {
                 <img className="w-10 h-10 rounded-full mx-2" src="https://images.pexels.com/photos/14391922/pexels-photo-14391922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="user-profile"/> */}
             </div>
             <div onClick={handleHamb} className='lg:hidden flex items-center'>
-            <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
             </div>
         </nav>
         
@@ -128,10 +128,10 @@ export const Navbar = () => {
                     </ul> */}
             </li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={handleHamb}>
-                <a href='#contact-us' onClick={handleHamb}>About Us</a>
+                <a href='#about-us' >About Us</a>
             </li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={handleHamb}>
-                <a href='#contact-us' onClick={handleHamb}>Contact Us</a>
+                <a href='#contact-us' >Contact Us</a>
             </li>
             <div className=' lg:hidden lg:flex w-fit items-center relative mx-auto py-2 '>
                     <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />

@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar'
 import Category from '../components/Category'
 import Footer from '../components/Footer'
 import JoinUs from '../components/JoinUs'
+import AboutUs from '../components/AboutUs'
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Navbar />
         <ReactCarousel />
         <Category />
+        <AboutUs />
         <JoinUs />
         <Footer />
         {/* <div className='w-full h-[900px] bg-blue-900'></div> */}
