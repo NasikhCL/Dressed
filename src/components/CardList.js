@@ -21,16 +21,9 @@ export default function CardList() {
   const [isComplete, setIsComplete] = useState(false)
   const [ourUsers, setOurUsers] = useState([])
   // console.log(ourUsers)
-  let q = null;
+  let q ;
   if(params.searchQuery){
-    let search = '*'+params.searchQuery+'*'
-    console.log(search)
-    //  q = query(
-      q = collection(db, "users")
-      // where("title", ">=", params.searchQuery),where("title", "<=", params.searchQuery+'\uf8ff' )
-      // where("title", "==",  params.searchQuery)  
-    // );
-    // db.get().collection(collection.PRODUCT_COLLECTION).find({Name: {$regex: pname}}).toArray();
+    q = collection(db, "users")
   }else{ 
    q = query(
     collection(db, "users"),
