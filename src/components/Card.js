@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 
 
 export default function Card({userData}) {
+    
     const [favList , setFavList] = useState([])
-    // let oldItems = JSON.parse(localStorage.getItem('favDressArr')) || [];
+    
     useEffect(()=>{
         const localStorageFavDresses = localStorage.getItem('favDresses');
-        if(localStorageFavDresses && JSON.parse(localStorageFavDresses) !== favList){
+        if(localStorageFavDresses && JSON.parse(localStorageFavDresses) !== localStorageFavDresses){
             setFavList( JSON.parse(localStorageFavDresses)) 
         }  else if (!localStorageFavDresses) {
             setFavList([]);
@@ -16,27 +17,28 @@ export default function Card({userData}) {
     useEffect(() => {
         if (favList.length > 0) {
         localStorage.setItem('favDresses', JSON.stringify(favList));
+        }else{
+            localStorage.setItem('favDresses', JSON.stringify([]));
         }
       }, [favList]);
 
     const addToFav =()=>{
-        // console.log('added to fav ')
-        // if(favList.some(item=> item.id === userData.id)){
-        //     console.log('item alredy exist in fav')
-        // }else{
+        
             setFavList([...favList, userData]);
             console.log('item added to fav')
-            // const updatedList = [...favList, userData];
-            // localStorage.setItem('favDressArr', JSON.stringify(updatedList));
-            // setFavList(updatedList)
-        // }
+      
     }
     const removeFromFav =()=>{
         const filteredItems = favList.filter(item => item.id !== userData.id)
-            setFavList(filteredItems)
+        setFavList(filteredItems)
+            if(filteredItems.length === 0){ 
+                setFavList([])
+
+                localStorage.clear()
+                console.log('item removed') 
+            }
+            console.log('rem removed') 
         
-        //    console.log('item removed') 
-        //     localStorage.setItem('favDressArr', JSON.stringify(favList));
         
     }
  
@@ -61,9 +63,7 @@ export default function Card({userData}) {
             <p className="mb-2 leading-normal">
                {userData.description}
             </p>
-            {/* <button className="px-4 py-2 text-sm text-blue-100 bg-blue-500 rounded shadow">
-                View
-            </button> */}
+           
         </div>
     </div>
   )
