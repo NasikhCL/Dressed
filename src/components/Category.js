@@ -21,12 +21,12 @@ export default function Category() {
     } 
   
   return (
-    <div id='category' className='my-7 lg:h-[700px] pt-16 text-black bg-gray-100'>
+    <div id='category' className='m lg:h-[550px]  pt-16 text-black bg-gray-100'>
         <h1 className='text-2xl font-bold mb-5 px-7'>Category</h1>
-        <div className='flex flex-wrap items-center justify-evenly w-full p-7'>
+        <div className='flex flex-wrap items-center justify-evenly w-full px-7'>
             {/* <Link  to='/category' onClick={onOpenModal} className='flex flex-col items-center w-2/12 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '> */}
-                <div onClick={()=> onOpenModal('marrige-dress')} className='flex flex-col items-center w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '>
-                    <div className='h-80 w-full' >
+                <div onClick={()=> onOpenModal('marrige-dress')} className='flex  flex-col items-center w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '>
+                    <div className='h-80 w-full ' >
                         <img className='h-full w-full rounded-xl' src="https://images.pexels.com/photos/1560303/pexels-photo-1560303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt='category'/>
                     </div>
                     <h4 className='font-bold text-xl'>Marrige outfits</h4>

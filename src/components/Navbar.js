@@ -84,8 +84,8 @@ export const Navbar = () => {
                     </ul>
                 </li>
 
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#contact-us'>Contact Us</a></li>
                 <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#about-us'>About Us</a></li>
+                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#contact-us'>Contact Us</a></li>
             </ul>
             
             
@@ -114,28 +114,22 @@ export const Navbar = () => {
         </nav>
         
     
-        <ul className={isHambListVisible ? 'text-blue-900 pb-3 lg:hidden' : 'text-blue-900 pb-3 hidden'}>
-            <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={()=> navigate('/')}>Home</li>
+        <ul className={isHambListVisible ? 'text-white pb-3 bg-black lg:hidden' : 'text-white bg-black pb-3 hidden'} onClick={handleHamb}>
+            <li className='block px-3 my-3 pt-3  hover:bg-gray-200 ' onClick={()=> navigate('/')}>Home</li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={()=> navigate('/favourites')}>Favourites</li>
             {/* <li className='block px-3 my-3 hover:bg-gray-200 '>Category</li> */}
-            <li className='block px-3 hover:bg-gray-200 relative group ' onClick={handleHamb}> 
+            <li className='block px-3 hover:bg-gray-200 relative group ' > 
                    <a href='#category' >Category</a>
-                    {/* <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-7 border group-hover:transition-all group-hover:duration-300 z-10' >
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('birthday-dress')}>Birthday Dress</li>
-                        <li className='bg-blue-300 text-black hover:text-cyan-700 hover:bg-gray-200 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
-                    </ul> */}
             </li>
-            <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={handleHamb}>
+            <li className='block px-3 my-3 hover:bg-gray-200 ' >
                 <a href='#about-us' >About Us</a>
             </li>
-            <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={handleHamb}>
+            <li className='block px-3 my-3 hover:bg-gray-200 ' >
                 <a href='#contact-us' >Contact Us</a>
             </li>
-            <div className=' lg:hidden lg:flex w-fit items-center relative mx-auto py-2 '>
+            <div className=' lg:hidden lg:flex w-fit items-center text-black relative mx-auto py-2 ' onClick={handleHamb}>
                     <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />
-                    <div onClick={handleSearch} className='absolute right-4 top-2 cursor-pointer'>
+                    <div onClick={handleSearch} className='absolute right-4 top-2 text-black cursor-pointer'>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
                     

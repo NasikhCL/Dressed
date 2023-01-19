@@ -5,7 +5,7 @@ import Favourites from './pages/Favourites';
 import Home from './pages/Home';
 import SearchResult from './pages/SearchResult';
 import UsersList from './pages/UsersList';
-
+import AddUser from './components/AddUser';
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
         <Route excat path='/category/:gender/:categoryName' element={<UsersList/>}/>
         <Route exact path='/searchResults/:searchQuery' element={<SearchResult />} />
         <Route exact path='/favourites' element={<Favourites />} />
+        <Route exact path='/add-new-user' element={<AddUser />} />
       </Routes>
      {/* <Home /> */}
     </div>
