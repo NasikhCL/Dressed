@@ -16,7 +16,7 @@ export default function AdminPage() {
         {/* <div className=' flex  justify-center items-center h-fit bg-cover '> */}
             <Routes>
                 <Route exact path='/login' element={<Login />}/>
-                <Route exact path='/add-new-outfit' element={ <AddUser /> }/>
+                <Route exact path='/add-new-outfit' element={ <PrivateRoute> <AddUser /></PrivateRoute> }/>
                 <Route path="*" element={<F0F />} />
             </Routes> 
             
