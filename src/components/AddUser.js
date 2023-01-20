@@ -18,7 +18,7 @@ export default function AddUser() {
   const handleSubmit = async(e) => {
     e.preventDefault()
    
-    // Send form data to the server or handle form data
+    // Send form data to the server
     
         // userDatas.forEach( async(user) => {
 
@@ -29,6 +29,7 @@ export default function AddUser() {
                     return;
                   }
 
+//adding data to the firebase firestore
 
                 const docRef = await addDoc(collection(db, "users"), {id, title, description, photoUrl});
                 console.log("Document written with ID: ", docRef.id);
@@ -39,11 +40,6 @@ export default function AddUser() {
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
-
-
-        // })
-
-    // }
 
   }
 

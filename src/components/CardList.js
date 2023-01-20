@@ -16,11 +16,12 @@ export default function CardList() {
 //   const paramsGender = props.gender
   const CategoryName = params.categoryName
   // console.log(categoryName)
-  console.log(params)
+  // console.log(params)
    
   const [isComplete, setIsComplete] = useState(false)
   const [ourUsers, setOurUsers] = useState([])
   // console.log(ourUsers)
+  
   let q ;
   if(params.searchQuery){
     q = collection(db, "users")

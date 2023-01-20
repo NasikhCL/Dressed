@@ -18,7 +18,6 @@ function App() {
         <Route exact path='/favourites' element={<Favourites />} />
         <Route exact path='/add-new-user' element={<AddUser />} />
       </Routes>
-     {/* <Home /> */}
     </div>
   ); 
 }

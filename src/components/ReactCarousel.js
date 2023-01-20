@@ -6,7 +6,7 @@ import './react-carousel.css'
 export default function ReactCarousel() {
   return (
     <div id='home'>
-      <Carousel  className='cursor-pointer -z-10 mx-auto' interval={5000}  autoPlay showThumbs={false} centerMode={false} infiniteLoop  showStatus={false}>
+      <Carousel  className='cursor-pointer -z-10 mx-auto'   autoPlay showThumbs={false} centerMode={false} infiniteLoop  showStatus={false}>
         <div  className='bg-cyan-200 overflow-hidden zoom-in-out-box' > 
           <img className=' ' src="https://images.pexels.com/photos/1496647/pexels-photo-1496647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt='carousel' />
           <p className="legend">Blind Eyes</p>
