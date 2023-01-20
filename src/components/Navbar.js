@@ -75,7 +75,7 @@ export const Navbar = () => {
             <ul className='flex '>
                 <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer' onClick={()=> navigate('/')}><a href='#home'>Home</a></li>
                 <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group ' onClick={handleHamb}> 
-                   <a href='#category'>Category</a>
+                   <a href='/#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300 '>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
@@ -84,8 +84,8 @@ export const Navbar = () => {
                     </ul>
                 </li>
 
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#about-us'>About Us</a></li>
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='#contact-us'>Contact Us</a></li>
+                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#about-us'>About Us</a></li>
+                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#contact-us'>Contact Us</a></li>
             </ul>
             
             
@@ -119,13 +119,13 @@ export const Navbar = () => {
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={()=> navigate('/favourites')}>Favourites</li>
             {/* <li className='block px-3 my-3 hover:bg-gray-200 '>Category</li> */}
             <li className='block px-3 hover:bg-gray-200 relative group ' > 
-                   <a href='#category' >Category</a>
+                   <a href='/#category' >Category</a>
             </li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' >
-                <a href='#about-us' >About Us</a>
+                <a href='/#about-us' >About Us</a>
             </li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' >
-                <a href='#contact-us' >Contact Us</a>
+                <a href='/#contact-us' >Contact Us</a>
             </li>
             <div className=' lg:hidden lg:flex w-fit items-center text-black relative mx-auto py-2 ' onClick={handleHamb}>
                     <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />

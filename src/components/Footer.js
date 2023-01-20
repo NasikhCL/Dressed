@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import TBC from '../images/TBC.png';
+ 
 
 export default function Footer() {
   return (
@@ -21,6 +23,7 @@ export default function Footer() {
                 <span className='ml-3'>+91-9988776655</span></div>
                 <div className=''><span><i className="fa-solid fa-envelope"></i></span>
                 <span className='ml-3'>letsgetdressed@gmail.com</span></div>
+                <div className='text-blue-700'><Link to='/admin/add-new-outfit' >are you Admin?</Link></div>
             </div>
   
         </div>

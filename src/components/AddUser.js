@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {db} from '../config/firebase'
-
 import { 
-    collection,
-    addDoc
+  collection,
+  addDoc
 } from 'firebase/firestore'
+import { toast } from 'react-toastify';
 
  
 
@@ -14,6 +14,7 @@ export default function AddUser() {
   const [id, setId] = useState(crypto.getRandomValues(new Uint32Array(1))[0]);
   const [description, setDescription] = useState('');
   const [photoUrl, setPhotoUrl] = useState('');
+  const [category, setCategory] = useState('choose-category')
 
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -25,7 +26,12 @@ export default function AddUser() {
             try {
                 
                 if (!title || !description || !photoUrl) {
-                    alert("All fields are required");
+                    
+                    toast.error('please fill all fields')
+                    return;
+                  }
+                  if(category === 'choose-category'){
+                    toast.error('please choose a category')
                     return;
                   }
 
@@ -37,6 +43,7 @@ export default function AddUser() {
                 setId(crypto.getRandomValues(new Uint32Array(1))[0]);
                 setDescription('')
                 setPhotoUrl('')
+                toast.success('outfit added sucessfully')
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
@@ -44,25 +51,26 @@ export default function AddUser() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Title:
-        <input className='border'  required type="text" value={title} onChange={e => setTitle(e.target.value)} />
-      </label>
-      <br />
+    <form className='p-7 sm:p-14 bg-gray-300  rounded flex flex-col justify-start items-center' onSubmit={handleSubmit}>
+            <h1 className='text-2xl font-bold text-blue-900 mb-7'>Add New Outfit</h1>
+        <div className=' flex flex-col flex-wrap justify-evenly '>
+          <input className=' outline-none rounded pl-1 mb-4'   type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder='title' />
+          <select className=' outline-none rounded pl-1 mb-4'  value={category} onChange={(e)=> setCategory(e.target.value)}>
+          <option  value='choose-category'>choose-category</option>
+            <option  value='marrige-outfit'>marrige-outfit</option>
+            <option  value='anniversary-outfit'>anniversary-outfit</option>
+            <option  value='birthday-outfit'>birthday-outfit</option> 
+            <option  value='college-fest-outfit'>college-fest-outfit</option>
+          </select>
+          <textarea className=' outline-none rounded pl-1 mb-4'  value={description} onChange={e => setDescription(e.target.value)} placeholder='description' />
+          <input className=' outline-none rounded pl-1 mb-4'  type="text" value={photoUrl} onChange={e => setPhotoUrl(e.target.value)} placeholder='photo Url' />
 
-      <label>
-        Description:
-        <textarea className='border' required value={description} onChange={e => setDescription(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Photo URL:
-        <input className='border' required type="text" value={photoUrl} onChange={e => setPhotoUrl(e.target.value)} />
-      </label>
-      <br />
-      <input className='border px-3 py-2 bg-blue-500 text-white cursor-pointer' type="submit" value="Submit" />
-    </form>
+        </div>
+        
+        <button className='px-4 py-1 bg-blue-900 text-white rounded-xl mb-4 hover:bg-blue-800'>Submit</button>
+        <p className='text-sm text-red-700'>*please verify all the details before submit</p>
+        </form>
+ 
     
   )
 }
