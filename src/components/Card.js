@@ -42,14 +42,14 @@ export default function Card({userData}) {
         <div className="p-4">
             <div className='flex justify-between'>
                 <h4 className="text-xl font-semibold tracking-tight text-blue-900">
-                    {userData.title}
+                    {userData.title.charAt(0).toUpperCase() +userData.title.slice(1)}
                 </h4>
                 <button onClick={handleFavClick}>
                     {isFav ? <h4 className='text-red-500 text-2xl cursor-pointer'><i className="fa-solid fa-heart"></i></h4> : <h4 className='text-gray-400 text-2xl cursor-pointer'><i className="fa-regular fa-heart"></i></h4>}
                 </button>
               </div>
             <p className="mb-2 leading-normal">
-               {userData.description}
+               {userData.description.charAt(0).toUpperCase() + userData.description.slice(1)}
             </p>
            
         </div>
