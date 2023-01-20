@@ -14,6 +14,7 @@ export default function AddUser() {
   const [id, setId] = useState(crypto.getRandomValues(new Uint32Array(1))[0]);
   const [description, setDescription] = useState('');
   const [photoUrl, setPhotoUrl] = useState('');
+  const [ gender, setGender] = useState('choose-gender')
   const [category, setCategory] = useState('choose-category')
 
   const handleSubmit = async(e) => {
@@ -30,8 +31,8 @@ export default function AddUser() {
                     toast.error('please fill all fields')
                     return;
                   }
-                  if(category === 'choose-category'){
-                    toast.error('please choose a category')
+                  if(category === 'choose-category' || gender === 'choose-gender' ){
+                    toast.error('please choose a category and gender')
                     return;
                   }
 
@@ -43,6 +44,8 @@ export default function AddUser() {
                 setId(crypto.getRandomValues(new Uint32Array(1))[0]);
                 setDescription('')
                 setPhotoUrl('')
+                setCategory('choose-category')
+                setGender('choose-gender')
                 toast.success('outfit added sucessfully')
             } catch (e) {
                 console.error("Error adding document: ", e);
@@ -56,11 +59,16 @@ export default function AddUser() {
         <div className=' flex flex-col flex-wrap justify-evenly '>
           <input className=' outline-none rounded pl-1 mb-4'   type="text" value={title} onChange={e => setTitle(e.target.value)} placeholder='title' />
           <select className=' outline-none rounded pl-1 mb-4'  value={category} onChange={(e)=> setCategory(e.target.value)}>
-          <option  value='choose-category'>choose-category</option>
+          <option  value='choose-category'>choose category</option>
             <option  value='marrige-outfit'>marrige-outfit</option>
             <option  value='anniversary-outfit'>anniversary-outfit</option>
             <option  value='birthday-outfit'>birthday-outfit</option> 
             <option  value='college-fest-outfit'>college-fest-outfit</option>
+          </select>
+          <select className=' outline-none rounded pl-1 mb-4'  value={gender} onChange={(e)=> setGender(e.target.value)}>
+            <option  value='choose-gender'>choose gender</option>
+            <option  value='male'>male</option>
+            <option  value='female'>female</option>
           </select>
           <textarea className=' outline-none rounded pl-1 mb-4'  value={description} onChange={e => setDescription(e.target.value)} placeholder='description' />
           <input className=' outline-none rounded pl-1 mb-4'  type="text" value={photoUrl} onChange={e => setPhotoUrl(e.target.value)} placeholder='photo Url' />
