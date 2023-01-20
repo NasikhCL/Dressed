@@ -94,7 +94,7 @@ export const Navbar = () => {
                 <div className='mr-5 text-2xl ' onClick={()=> navigate('/favourites')} >
                     <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
-                <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
+                <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
                 {/* <Link  className='absolute right-4 cursor-pointer'  to={`/searchResults/${searchQuery}`}> */}
                     <div className='absolute right-4 cursor-pointer' onClick={handleSearch} >
                         <i className="fa-solid fa-magnifying-glass"></i>
@@ -128,7 +128,7 @@ export const Navbar = () => {
                 <a href='/#contact-us' >Contact Us</a>
             </li>
             <div className=' lg:hidden lg:flex w-fit items-center text-black relative mx-auto py-2 ' onClick={handleHamb}>
-                    <input onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />
+                    <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border' value={searchQuery} onChange={handleSearchQuery} />
                     <div onClick={handleSearch} className='absolute right-4 top-2 text-black cursor-pointer'>
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
