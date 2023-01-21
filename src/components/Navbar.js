@@ -36,7 +36,7 @@ export const Navbar = () => {
         setSearchQuery(value)
         // console.log(searchQuery)
     }
-    console.log(searchQuery);
+    // console.log(searchQuery);
 
     const handleSearch = ()=>{
         console.log(searchQuery)
@@ -95,18 +95,11 @@ export const Navbar = () => {
                     <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
                 <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
-                {/* <Link  className='absolute right-4 cursor-pointer'  to={`/searchResults/${searchQuery}`}> */}
+            
                     <div className='absolute right-4 cursor-pointer' onClick={handleSearch} >
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
-                {/* </Link> */} 
-                {/* <div className='mx-5'>Register</div>
-                <div className='mx-5'>Login</div>
-                <div className='relative mx-5'>
-                    <i class="fa-solid fa-cart-shopping text-xl"></i>
-                    <div class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-2.5 -right-2">10</div>
-                </div>
-                <img className="w-10 h-10 rounded-full mx-2" src="https://images.pexels.com/photos/14391922/pexels-photo-14391922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="user-profile"/> */}
+              
             </div>
             <div onClick={handleHamb} className='lg:hidden flex items-center'>
                 <i className="fa-solid fa-bars"></i>
@@ -117,7 +110,7 @@ export const Navbar = () => {
         <ul className={isHambListVisible ? 'text-white pb-3 bg-black lg:hidden' : 'text-white bg-black pb-3 hidden'} onClick={handleHamb}>
             <li className='block px-3 my-3 pt-3  hover:bg-gray-200 ' onClick={()=> navigate('/')}>Home</li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={()=> navigate('/favourites')}>Favourites</li>
-            {/* <li className='block px-3 my-3 hover:bg-gray-200 '>Category</li> */}
+            
             <li className='block px-3 hover:bg-gray-200 relative group ' > 
                    <a href='/#category' >Category</a>
             </li>
@@ -135,7 +128,7 @@ export const Navbar = () => {
                     
             </div>
         </ul>
-        {open && <Modal open={open} onClose={onCloseModal} center>
+        { open && <Modal open={open} onClose={onCloseModal} center>
             <div className='flex justify-center py-6'>
                 <div className='mx-1 w-2/5 h-60 cursor-pointer ' onClick={onCloseModal} >
                     <Link to={`/category/male/${currentCategory}`} >

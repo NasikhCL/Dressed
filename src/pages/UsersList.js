@@ -1,15 +1,10 @@
-import React from 'react'
-import CardList from '../components/CardList'
-
+import React from "react";
+import CardList from "../components/CardList";
 
 export default function UsersList() {
-
-
-
-  return ( 
+  return (
     <>
-        {/* <Navbar /> */}
-        <CardList  />
+      <CardList />
     </>
-  )
-} 
+  );
+}

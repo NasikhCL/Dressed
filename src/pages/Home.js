@@ -19,12 +19,7 @@ export default function Home() {
         <Category />
         <AboutUs />
         <JoinUs />
-        <Footer />
-        {/* <div className='w-full h-[900px] bg-blue-900'></div> */}
-      
-
-        
-       
+        <Footer /> 
     </div>
   ) 
 }
