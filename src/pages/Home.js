@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className=''>
         <Navbar />
-        <ReactCarousel />
+        {/* <ReactCarousel /> */}
         <Category />
         <AboutUs />
         <JoinUs />

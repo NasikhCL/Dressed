@@ -64,17 +64,17 @@ export const Navbar = () => {
     const handleHamb =()=>{
        setIsHambListVisbile(prevState=> !prevState)
     }
-  return (
-    <div className=' sticky top-0 bg-white text-red-600 font-medium' style={{zIndex:'100'}}>
-
-        <nav className=' w-100 h-14 mb-2 px-4 lg:shadow-xl border-b-2 border-gay-400 text-black flex items-center justify-between'>
-            <div className='flex items-center '>
-                <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
-                <h4 className="font-bold">Lets Get Dressed</h4> 
-            </div>
-            <ul className='flex '>
-                <li className='hidden lg:block mx-5 hover:text-cyan-700 hover:scale-105 cursor-pointer' onClick={()=> navigate('/')}><a href='#home'>Home</a></li>
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group ' onClick={handleHamb}> 
+  return (  
+    <div className='w-full   bg-transparent text-white font-medium' style={{zIndex:'100'}}>
+        <video className=' top-0 w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
+        <nav className=' absolute top-7 w-full h-14 mb-2 z-20 px-4   border-gay-400  flex items-center justify-between'>
+            {/* <div className='w-?1/5 '> */}
+                {/* <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
+                <h4 className="font-bold">Lets Get Dressed</h4>  */}
+            {/* </div> */}
+            <ul className='flex text-md text-xl'>
+                <li className='hidden lg:block text-x mx-2 hover:text-black hover:scale-105 cursor-pointer' onClick={()=> navigate('/')}><a href='#home'>Home</a></li>
+                <li className='hidden lg:block mx-2 cursor-pointer hover:text-cyan-700 hover:scale-105 relative group ' onClick={handleHamb}> 
                    <a href='/#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300 '>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
@@ -83,9 +83,12 @@ export const Navbar = () => {
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
                     </ul>
                 </li>
-
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#about-us'>About Us</a></li>
-                <li className='hidden lg:block mx-5 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#contact-us'>Contact Us</a></li>
+                 <div className='flex flex-col justfy-center items-center '>
+                    <img className="w-fit h-10  object-cover"  src={TBC} alt="logo"/>             
+                    <h4 className="font-bold">Lets Get Dressed</h4> 
+                </div>
+                <li className='hidden lg:block mx-2 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#about-us'>About Us</a></li>
+                <li className='hidden lg:block mx-2 cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#contact-us'>Contact Us</a></li>
             </ul>
             
             
@@ -94,7 +97,7 @@ export const Navbar = () => {
                 <div className='mr-5 text-2xl ' onClick={()=> navigate('/favourites')} >
                     <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
-                <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-72 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
+                <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-60 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
             
                     <div className='absolute right-4 cursor-pointer' onClick={handleSearch} >
                         <i className="fa-solid fa-magnifying-glass"></i>

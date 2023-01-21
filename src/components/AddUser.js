@@ -30,6 +30,7 @@ export default function AddUser() {
         title,
         description,
         photoUrl,
+        category
       });
       console.log("Document written with ID: ", docRef.id);
       setTitle("");
