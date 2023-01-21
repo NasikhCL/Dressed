@@ -25,7 +25,7 @@ export default function AddUser() {
       }
 
       //adding data to the firebase firestore
-      const docRef = await addDoc(collection(db, "users"), {
+      const docRef = await addDoc(collection(db, "outfits"), {
         id,
         title,
         description,

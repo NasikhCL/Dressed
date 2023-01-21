@@ -18,10 +18,10 @@ export default function CardList() {
 
   let q;
   if (params.searchQuery) {
-    q = collection(db, "users");
+    q = collection(db, "outfits");
   } else {
     q = query(
-      collection(db, "users"),
+      collection(db, "outfits"),
       where("gender", "==", params.gender),
       where("category", "==", params.categoryName)
     );
