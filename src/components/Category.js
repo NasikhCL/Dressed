@@ -35,7 +35,7 @@ export default function Category() {
           </div>
           <h4 className="font-bold text-xl">Marrige outfits</h4>
         </div>
-        {/* </Link> */}
+
         <div
           onClick={() => onOpenModal("anniversary-outfits")}
           className="flex flex-col items-center  w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out "

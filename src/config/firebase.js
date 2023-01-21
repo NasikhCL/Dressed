@@ -3,13 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDnsRvnzI0V-ggQsDOZwNpdXgDP8De9zXw",
-    authDomain: "let-s-get-dressed.firebaseapp.com",
-    projectId: "let-s-get-dressed",
-    storageBucket: "let-s-get-dressed.appspot.com",
-    messagingSenderId: "246344300201",
-    appId: "1:246344300201:web:8f595a4b1ed07e85abdbb8",
-    measurementId: "G-LY3VNTHR8R"
+  apiKey: "AIzaSyAt5XVw04lxKmNBY-eHNxd7p-jz7kd8yVY",
+  authDomain: "dressed-123.firebaseapp.com",
+  projectId: "dressed-123",
+  storageBucket: "dressed-123.appspot.com",
+  messagingSenderId: "316267562696",
+  appId: "1:316267562696:web:ae3ff2d020ba829b5c87fd",
+  measurementId: "G-XBBPDHKRN0"
   };
   
 
