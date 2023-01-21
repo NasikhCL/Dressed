@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom'; 
 import TBC from '../images/TBC.png';
-import headerVideo from '../videos/headerVideo.mp4' 
+
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
@@ -58,15 +58,15 @@ export const Navbar = () => {
     const onCloseModal = () =>{
         setOpen(false);
         setCurrentCategory('')
-    }  
+    } 
   
 
-    const handleHamb =()=>{
+    const handleHamb =()=>{ 
        setIsHambListVisbile(prevState=> !prevState)
     }
   return (  
-    <div className='w-full   bg-transparent text-white font-medium' style={{zIndex:'100'}}>
-        <video className=' top-0 w-full  max-w-none' src={headerVideo} loop muted playsInline autoPlay></video>
+    <div className='w-full bg-transparent text-white font-medium' style={{zIndex:'100'}}>
+        <video className='top-0 w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
         <nav className=' absolute top-7 w-full h-14 mb-2 z-20 px-4   border-gay-400  flex items-center justify-center'>
             {/* <div className='w-?1/5 '> */}
                 {/* <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
