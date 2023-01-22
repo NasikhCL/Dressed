@@ -16,7 +16,7 @@ const PrivateRoute = ({ children }) => {
   console.log("user", user);
 
   if(children.type === AddUser){
-    if(user && user.uid === localUser && user.uid === '2zBotXyOCzaNDBdg6W20zUFjGAi2'){
+    if(user && user.uid === localUser && user.uid === '7kpbuHG673dFbY2Y0ppXy92GA7i1'){
       return children
     }else{
        return <Navigate to={"/admin/login"} />
