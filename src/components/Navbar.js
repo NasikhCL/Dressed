@@ -89,10 +89,10 @@ export const Navbar = () => {
                 <li className='hidden lg:block  cursor-pointer hover:text-black hover:scale-105 relative group ' onClick={handleHamb}> 
                    <a href='/#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[180px] left-0 group-hover:transition-all group-hover:duration-300 '>
-                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-dress')}>Marrige Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-outfits')}>Marrige Dress</li>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary Dress</li>
-                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('birthday-dress')}>Birthday Dress</li>
-                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('birthday-outfits')}>Birthday Dress</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-outfits')}>College Fest Dress</li>
                     </ul>
                 </li>
                  <div className='flex flex-col text-sm lg:text-xl justfy-center items-center '>
