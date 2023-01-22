@@ -105,7 +105,7 @@ export const Navbar = () => {
                 <div className='mr-5 text-2xl ' onClick={()=> navigate('/favourites')} >
                     <i className="fa-regular cursor-pointer fa-heart"></i>
                 </div>
-                <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl border border-black outline-none w-60 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
+                <input type='search' onKeyDown={(e) => e.key === 'Enter' && handleSearch()} placeholder='Search...' className='pl-2 rounded-xl text-black border border-black outline-none w-60 px-2 py-1' value={searchQuery} onChange={handleSearchQuery}/>
             
                     <div className='absolute right-3 backg cursor-pointer text-black' onClick={handleSearch} >
                         <i className="fa-solid fa-magnifying-glass"></i>
