@@ -52,11 +52,11 @@ export default function SignUp() {
 
     
       return (
-        <form className='p-7 sm:p-14 bg-gray-300 h-[100vh] rounded flex flex-col justify-start items-center'
+        <form className='p-7 sm:p-14 bg-cover bg-[url("https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")] h-[100vh] rounded flex flex-col justify-start items-center'
     
           onSubmit={handleSubmit}
         >
-          <h2 className="text-2xl font-bold">Let's get dressed</h2>
+          <h2 className="text-2xl text-white font-bold">Let's get dressed</h2>
           <h1 className="text-2xl font-bold text-blue-700">User SignUp</h1>
           <div className=" h-24 flex flex-col flex-wrap justify-evenly ">
           <input
@@ -89,7 +89,7 @@ export default function SignUp() {
             SignUp
           </button>
           
-          <div className="">Already have account ?<Link to='/user/login' className="text-blue-600 cursor-pointer"> Login here</Link></div>
+          <div className="text-white lg:text-black">Already have account ?<Link to='/user/login' className="text-blue-500 cursor-pointer"> Login here</Link></div>
           
         </form>
       );

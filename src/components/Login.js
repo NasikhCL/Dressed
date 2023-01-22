@@ -51,12 +51,12 @@ export default function Login() {
   };
 
   return (
-    <form className={location.pathname.startsWith('/admin') ? 'p-7 sm:p-14 bg-gray-300  rounded flex flex-col justify-start items-center' : 'p-7 sm:p-14 bg-gray-300 h-[100vh]  rounded flex flex-col justify-start items-center '}
+    <form className={location.pathname.startsWith('/admin') ? 'p-7 sm:p-14 bg-gray-300  rounded flex flex-col justify-start items-center' : 'p-7 sm:p-14 bg-cover bg-[url("https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")] h-[100vh]  rounded flex flex-col justify-start items-center '}
 
       onSubmit={handleSubmit}
     >
       {
-        location.pathname.startsWith('/user') && <h2 className="text-2xl font-bold">Let's get dressed</h2>
+        location.pathname.startsWith('/user') && <h2 className="text-2xl text-white font-bold">Let's get dressed</h2>
       }
       <h1 className="text-2xl font-bold text-blue-700">{location.pathname.startsWith('/admin') ? 'Admin' : 'User'} Login</h1>
       <div className=" h-24 flex flex-col flex-wrap justify-evenly ">
