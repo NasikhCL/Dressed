@@ -1,6 +1,7 @@
 import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom'; 
 import TBC from '../images/TBC.png';
+import HeaderVideo from '../videos/headerVideo.mp4'
 import './navbar.css'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
@@ -75,7 +76,7 @@ export const Navbar = () => {
 
             </div>
         </div>
-        <video className='top-0 object-cover h-[500px] lg:h-[550px] w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
+        <video className='top-0 object-cover h-[500px] lg:h-[550px] w-full  max-w-none' src={HeaderVideo} loop muted playsInline autoPlay></video>
         <nav className=' absolute top-12 w-full h-14 mb-2 z-20 px-4   border-gay-400  flex items-center justify-center'>
         <h2 className='absolute top-96 text-bold italic text-2xl '><div>"Find your fashion</div><div> Own your fashion"</div></h2>
             {/* <div className='w-?1/5 '> */}
