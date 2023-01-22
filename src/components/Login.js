@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function Login() {
+  const location = useLocation()
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(()=>{
+    let localUser = localStorage.getItem("user")
+    if(localUser){
+      navigate('/')
+    }
+
+  })
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,10 +26,19 @@ export default function Login() {
         setPassword("");
         // Signed in
         const user = userCredential.user;
-        sessionStorage.setItem("adminUser", JSON.stringify(user.uid));
         console.log(user);
+        sessionStorage.setItem("user", JSON.stringify(user.uid));
         toast.success("Login Successfully");
-        navigate("/admin/add-new-outfit");
+        if (location.pathname.startsWith('/admin')) {
+          // Do something for admin routes
+          console.log('start with admin' , location)
+          navigate("/admin/add-new-outfit");
+        } else {
+          // Do something for other routes
+          console.log('start with user' , location)
+          navigate('/')
+        
+        }
         // ...
       })
       .catch((error) => {
@@ -33,11 +51,14 @@ export default function Login() {
   };
 
   return (
-    <form
-      className="p-7 sm:p-14 bg-gray-300  rounded flex flex-col justify-start items-center"
+    <form className={location.pathname.startsWith('/admin') ? 'p-7 sm:p-14 bg-gray-300  rounded flex flex-col justify-start items-center' : 'p-7 sm:p-14 bg-gray-300 h-[100vh]  rounded flex flex-col justify-start items-center '}
+
       onSubmit={handleSubmit}
     >
-      <h1 className="text-2xl font-bold text-blue-700">Admin Login</h1>
+      {
+        location.pathname.startsWith('/user') && <h2 className="text-2xl font-bold">Let's get dressed</h2>
+      }
+      <h1 className="text-2xl font-bold text-blue-700">{location.pathname.startsWith('/admin') ? 'Admin' : 'User'} Login</h1>
       <div className=" h-24 flex flex-col flex-wrap justify-evenly ">
         <input
           className="outline-none rounded pl-1"
@@ -60,6 +81,9 @@ export default function Login() {
       <button className="  px-4 py-1 bg-blue-900 hover:bg-blue-800 text-white rounded-xl">
         Login
       </button>
+      {
+        location.pathname.startsWith('/user') && <div className="">new user?<Link to='/user/signup' className="text-blue-600 cursor-pointer"> signup here</Link></div>
+      }
     </form>
   );
 }

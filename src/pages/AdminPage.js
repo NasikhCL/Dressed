@@ -4,7 +4,6 @@ import Login from "../components/Login";
 import AddUser from "../components/AddUser";
 import PrivateRoute from "../PrivateRoute";
 import { Navbar } from "../components/Navbar";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import F0F from "../components/F0F";
 
@@ -20,14 +19,13 @@ export default function AdminPage() {
           path="/add-new-outfit"
           element={
             <PrivateRoute>
-              {" "}
               <AddUser />
             </PrivateRoute>
           }
         />
         <Route path="*" element={<F0F />} />
       </Routes>
-      <ToastContainer />
+      
     </div>
   );
 }

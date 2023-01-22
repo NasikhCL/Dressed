@@ -1,44 +1,39 @@
 import React, {useEffect} from "react";
-import { Route, Routes,useNavigate } from "react-router-dom";
-import Auth from "./components/Auth";
+import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import F0F from "./components/F0F";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import AdminPage from "./pages/AdminPage";
 import Favourites from "./pages/Favourites";
 import Home from "./pages/Home";
 import SearchResult from "./pages/SearchResult";
 import UsersList from "./pages/UsersList";
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
-  // const navigate = useNavigate()
-  // useEffect(() => {
-  //   let authToken = sessionStorage.getItem('Auth-Token')
-
-  //   if (authToken) {
-  //     navigate('/login')
-  //   } 
-  // }, [])
-
-
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route
           excat
           path="/category/:gender/:categoryName"
-          element={<UsersList />}
+          element={<PrivateRoute><UsersList /></PrivateRoute>}
         />
         <Route
-          exact
+          exact 
           path="/searchResults/:searchQuery"
-          element={<SearchResult />}
+          element={<PrivateRoute><SearchResult /></PrivateRoute>}
         />
-        <Route exact path="/favourites" element={<Favourites />} />
+        <Route exact path="/favourites" element={<PrivateRoute><Favourites /></PrivateRoute>} />
         <Route exact path="/admin/*" element={<AdminPage />} />
-        <Route exact path="/favourites" element={<Favourites />} />
-        {/* <Route path="/auth" element={<Auth auth=firebase.auth} />} /> */}
+
+        <Route path="/user/login" element={<Login />} />
+        <Route path="/user/signup" element={<SignUp />} />
         <Route path="*" element={<F0F />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
