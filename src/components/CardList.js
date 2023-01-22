@@ -4,6 +4,7 @@ import { db } from "../config/firebase";
 import { collection, getDocs, where, query } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import TBC from '../images/TBC.png'
 
 export default function CardList() {
   const params = useParams();
@@ -46,9 +47,9 @@ export default function CardList() {
         } else {
           setOurUsers((prevData) => [...prevData, doc.data()]);
         }
-        setIsComplete(true);
         console.log(ourUsers)
       });
+      setIsComplete(true);
     };
     fetchData();
 
@@ -84,10 +85,10 @@ export default function CardList() {
               return <Card key={user.id} userData={user} />;
             })
           ) : (
-            <h1>No Results Found ...</h1>
+            <h1 className="mt-7">No Results Found ...</h1>
           )
         ) : (
-          <h1>Loading ...</h1>
+          <img className="w-60" src={TBC} />
         )}
       </div>
     </div>

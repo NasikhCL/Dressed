@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import TBC from '../images/TBC.png'
 export default function Favourites() {
   const navigate = useNavigate();
   const [myFavs, setMyFavs] = useState([]);
@@ -79,7 +79,7 @@ export default function Favourites() {
             <h2>No Data Found...</h2>
           )
         ) : (
-          <h2>Loading...</h2>
+          <img className="w-60" src={TBC} />
         )}
       </div>
     </div>
