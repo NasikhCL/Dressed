@@ -10,7 +10,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   useEffect(()=>{
-    let localUser = localStorage.getItem("user")
+    let localUser = JSON.parse(localStorage.getItem("user"))
     if(localUser){
       navigate('/')
     }
