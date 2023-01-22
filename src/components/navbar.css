@@ -1,0 +1,17 @@
+.marquee-container {
+    overflow: hidden;
+}
+
+.marquee-text {
+    animation: scroll-left 15s linear infinite;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    white-space: nowrap;
+
+}
+
+
+@keyframes scroll-left {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TBC from "../images/TBC.png";
 
-export default function Footer() {
+export default function Footer() { 
   return (
     <div id="contact-us" className=" w-full bg-white text-black px-7 mt-3 pt-5">
       <h2 className="text-2xl font-bold text-2xl mb-7">Contact Us</h2>

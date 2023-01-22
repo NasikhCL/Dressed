@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import { useNavigate } from 'react-router-dom'; 
 import TBC from '../images/TBC.png';
-
+import './navbar.css'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
@@ -66,8 +66,20 @@ export const Navbar = () => {
     }
   return (  
     <div className='w-full bg-transparent text-white font-medium' style={{zIndex:'100'}}>
-        <video className='top-0 w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
-        <nav className=' absolute top-7 w-full h-14 mb-2 z-20 px-4   border-gay-400  flex items-center justify-center'>
+        <div className="marquee-container bg-black text-white w-full">
+            <div className="marquee-text py-1">
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+                <span> "let's get dressed" |</span>
+            </div>
+        </div>
+        <video className='top-0 object-cover h-[500px] lg:h-[550px] w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
+        <nav className=' absolute top-12 w-full h-14 mb-2 z-20 px-4   border-gay-400  flex items-center justify-center'>
+        <h2 className='absolute top-96 text-bold italic text-2xl '><div>"Find your fashion"</div><div> "Own your fashion"</div></h2>
             {/* <div className='w-?1/5 '> */}
                 {/* <img className="w-14 h-10  mr-2 object-cover"  src={TBC} alt="logo"/>             
                 <h4 className="font-bold">Lets Get Dressed</h4>  */}
@@ -83,8 +95,8 @@ export const Navbar = () => {
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-dress')}>College Fest Dress</li>
                     </ul>
                 </li>
-                 <div className='flex flex-col justfy-center items-center '>
-                    <img className="w-fit h-10  object-cover"  src={TBC} alt="logo"/>             
+                 <div className='flex flex-col text-sm lg:text-xl justfy-center items-center '>
+                    <img className="w-fit h-7 lg:h-10   object-cover"  src={TBC} alt="logo"/>             
                     <h4 className="font-bold">Lets Get Dressed</h4> 
                 </div>
                 <li className='hidden lg:block  cursor-pointer hover:text-cyan-700 hover:scale-105'><a href='/#about-us'>About Us</a></li>
@@ -110,7 +122,7 @@ export const Navbar = () => {
         </nav>
         
     
-        <ul className={isHambListVisible ? 'text-white pb-3 bg-black lg:hidden' : 'text-white bg-black pb-3 hidden'} onClick={handleHamb}>
+        <ul className={isHambListVisible ? 'text-white pb-3 bg-black lg:hidden absolute top-24 right-0 w-full' : 'text-white bg-black pb-3 hidden'} onClick={handleHamb}>
             <li className='block px-3 my-3 pt-3  hover:bg-gray-200 ' onClick={()=> navigate('/')}>Home</li>
             <li className='block px-3 my-3 hover:bg-gray-200 ' onClick={()=> navigate('/favourites')}>Favourites</li>
             

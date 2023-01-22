@@ -47,6 +47,7 @@ export default function CardList() {
           setOurUsers((prevData) => [...prevData, doc.data()]);
         }
         setIsComplete(true);
+        console.log(ourUsers)
       });
     };
     fetchData();

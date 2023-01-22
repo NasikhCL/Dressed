@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, {useEffect} from "react";
+import { Route, Routes,useNavigate } from "react-router-dom";
 import F0F from "./components/F0F";
 import AdminPage from "./pages/AdminPage";
 import Favourites from "./pages/Favourites";
@@ -8,6 +8,14 @@ import SearchResult from "./pages/SearchResult";
 import UsersList from "./pages/UsersList";
 
 function App() {
+  const navigate = useNavigate()
+  useEffect(() => {
+    let authToken = sessionStorage.getItem('Auth-Token')
+
+    if (authToken) {
+      navigate('/login')
+    } 
+  }, [])
 
 
   return (
@@ -34,3 +42,4 @@ function App() {
 }
 
 export default App;
+ 
