@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Children } from "react";
 import { Await, Navigate } from "react-router-dom";
 import { getAuth } from "firebase/auth";
 
 const PrivateRoute = ({ children }) => {
+  console.log(children);
   
   const localUser = JSON.parse(sessionStorage.getItem("adminUser"));
   const auth = getAuth();

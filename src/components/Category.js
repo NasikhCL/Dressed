@@ -23,7 +23,7 @@ export default function Category() {
       <div className="flex flex-wrap items-center justify-evenly w-full px-7">
         {/* <Link  to='/category' onClick={onOpenModal} className='flex flex-col items-center w-2/12 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '> */}
         <div
-          onClick={() => onOpenModal("marrige-dress")}
+          onClick={() => onOpenModal("marriage-outfits")}
           className="flex  flex-col items-center w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out "
         >
           <div className="h-80 w-full ">
@@ -50,7 +50,7 @@ export default function Category() {
           <h4 className="font-bold text-xl">Anniversary outfits</h4>
         </div>
         <div
-          onClick={() => onOpenModal("birthday-dress")}
+          onClick={() => onOpenModal("birthday-outfits")}
           className="flex flex-col items-center  w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out "
         >
           <div className="h-80 w-full">
@@ -63,7 +63,7 @@ export default function Category() {
           <h4 className="font-bold text-xl">Birthday outfits</h4>
         </div>
         <div
-          onClick={() => onOpenModal("college-fest-dress")}
+          onClick={() => onOpenModal("college-fest-outfits")}
           className="flex flex-col items-center  w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out "
         >
           <div className="h-80 w-full">

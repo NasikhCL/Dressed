@@ -66,10 +66,10 @@ export default function AddUser() {
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="choose-category">choose category</option>
-          <option value="marrige-outfit">marrige-outfit</option>
-          <option value="anniversary-outfit">anniversary-outfit</option>
-          <option value="birthday-outfit">birthday-outfit</option>
-          <option value="college-fest-outfit">college-fest-outfit</option>
+          <option value="marriage-outfits">marrige-outfits</option>
+          <option value="anniversary-outfits">anniversary-outfits</option>
+          <option value="birthday-outfits">birthday-outfits</option>
+          <option value="college-fest-outfits">college-fest-outfits</option>
         </select>
         <select
           className=" outline-none rounded pl-1 mb-4"
