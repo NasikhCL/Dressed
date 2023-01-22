@@ -68,13 +68,11 @@ export const Navbar = () => {
     <div className='w-full bg-transparent text-white font-medium' style={{zIndex:'100'}}>
         <div className="marquee-container bg-black text-white w-full">
             <div className="marquee-text py-1">
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
-                <span> "let's get dressed" |</span>
+                <span> Style is a way to say who you are without having to speak…Let's get dressed |</span>
+                <span> Style is a way to say who you are without having to speak…Let's get dressed |</span>
+                <span> Style is a way to say who you are without having to speak…Let's get dressed |</span>
+                <span> Style is a way to say who you are without having to speak…Let's get dressed |</span>
+
             </div>
         </div>
         <video className='top-0 object-cover h-[500px] lg:h-[550px] w-full  max-w-none' src='https://cdn.shopify.com/videos/c/o/v/7b6a5c5cba794a1bb2fa2e3828a8405f.mp4' loop muted playsInline autoPlay></video>
