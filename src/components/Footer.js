@@ -50,7 +50,7 @@ export default function Footer() {
           </svg>
         </div>
         <div className="flex text-center flex-col items-center justify-center mb-4">
-          <img className="w-[200px] h-[100px] my-4" src={TBC} alt="logo" />
+          <img className="w-[140px] my-4" src={TBC} alt="logo" />
           <h3>Copyright &#169; 2023 Lets Get Dressed Pvt.Ltd</h3>
         </div>
         <div className="my-4   w-64 flex flex-col justify-center items-center lg:items-start">

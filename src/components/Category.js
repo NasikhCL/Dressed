@@ -33,7 +33,7 @@ export default function Category() {
               alt="category"
             />
           </div>
-          <h4 className="font-bold text-xl">Marrige outfits</h4>
+          <h4 className="font-bold text-xl">Marriage outfits</h4>
         </div>
 
         <div
