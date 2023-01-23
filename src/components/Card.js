@@ -33,10 +33,10 @@ export default function Card({ userData }) {
   }, [isFav]);
 
   return (
-    <div className="border rounded-lg shadow-md max-w-sm w-[260px] mt-7 mx-1 ">
+    <div className="border rounded-lg shadow-md max-w-sm lg:w-[340px] w-[300px] mt-7 mx-1 ">
       <div className="h-96">
         <img
-          className="object-contain w-full h-full shadow-xl"
+          className="object-cover w-full h-full shadow-xl"
           src={userData.photoUrl}
           alt="user"
         />
