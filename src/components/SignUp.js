@@ -57,7 +57,7 @@ export default function SignUp() {
           onSubmit={handleSubmit}
         >
           <h2 className="text-2xl text-white font-bold">Let's get dressed</h2>
-          <h1 className="text-2xl font-bold text-blue-700">User SignUp</h1>
+          <h1 className="text-2xl font-bold text-blue-600 ">User SignUp</h1>
           <div className=" h-24 flex flex-col flex-wrap justify-evenly ">
           <input
               className="outline-none rounded pl-1"
