@@ -7,7 +7,7 @@ import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { Link } from 'react-router-dom';
 // import {db} from '../config/firebase'
-// import userDatas from '../userDatas'
+
 // import { 
 //     collection,
 //     addDoc
@@ -15,19 +15,27 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const navigate = useNavigate()
+    
     // const addDatas = async()=>{
 
-        // userDatas.forEach( async(user) => {
+    //     userDatas.forEach( async(user) => {
         
-        //     try {
-        //         const docRef = await addDoc(collection(db, "users"), {...user});
-        //         console.log("Document written with ID: ", docRef.id);
-        //     } catch (e) {
-        //         console.error("Error adding document: ", e);
-        //     }
+    //         try {
+    //             const docRef = await addDoc(collection(db, "outfits"), {
+    //                 id: crypto.getRandomValues(new Uint32Array(1))[0],
+    //                 category: user.category,
+    //                 photoUrl: user.photoUrl,
+    //                 gender: user.gender,
+    //                 title: user.title,
+    //                 description: user.description
+    //             });
+    //             console.log("Document written with ID: ", docRef.id);
+    //         } catch (e) {
+    //             console.error("Error adding document: ", e);
+    //         }
     
           
-        // })
+    //     })
 
     // }
     const [searchQuery, setSearchQuery] = useState('')

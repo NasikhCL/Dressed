@@ -10,11 +10,11 @@ export default function AboutUs() {
         <div className="flex justify-center items-center w-full lg:w-2/4 mb-7">
           <img
             className="w-32 md:w-64"
-            src="https://cdn.shopify.com/s/files/1/0609/2102/0609/files/grp_image_2_750x.jpg?v=1650647980"
+            src="https://img.freepik.com/free-photo/portrait-smiling-beautiful-girl-her-handsome-boyfriend-laughing-happy-cheerful-couple-sunglasses_158538-5002.jpg?w=826&t=st=1674490957~exp=1674491557~hmac=ac3d36354295ae18b2a0a671328e6cec112b75458e3a97e479a99b71902340db"
           />
           <img
             className="w-32 md:w-64"
-            src="https://cdn.shopify.com/s/files/1/0609/2102/0609/files/ganesh_1_540x.jpg?v=1650647967"
+            src="https://images.pexels.com/photos/11997433/pexels-photo-11997433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           />
         </div>
         <div className="lg:w-2/4 flex flex-col   justify-between items-center px-7 lg:px-14">
