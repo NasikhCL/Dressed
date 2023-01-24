@@ -96,7 +96,7 @@ export const Navbar = () => {
                 <li className='hidden lg:block  cursor-pointer hover:text-black hover:scale-105 relative group ' onClick={handleHamb}> 
                    <a href='/#category'>Category</a>
                     <ul className='hidden z-90 group-hover:block absolute top-4 pt-5 w-[230px] left-0 group-hover:transition-all group-hover:duration-300 '>
-                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-outfits')}>Marrige outfits</li>
+                        <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('marrige-outfits')}>Marriage outfits</li>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('anniversary-outfits')}>Anniversary outfits</li>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('birthday-outfits')}>Birthday outfits</li>
                         <li className='bg-black text-white  hover:bg-gray-500 p-2' onClick={()=> onOpenModal('college-fest-outfits')}>College Fest outfits</li>
