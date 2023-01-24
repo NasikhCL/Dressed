@@ -23,7 +23,7 @@ export default function Category() {
       <div className="flex flex-wrap items-center justify-evenly w-full px-7">
         {/* <Link  to='/category' onClick={onOpenModal} className='flex flex-col items-center w-2/12 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out '> */}
         <div
-          onClick={() => onOpenModal("marriage-outfits")}
+          onClick={() => onOpenModal("marrige-outfits")}
           className="flex  flex-col items-center w-[230px] m-1 h-fit hover:cursor-pointer hover:border border-blue-900 rounded-xl hover:scale-105 transition-all duration-300 ease-in-out "
         >
           <div className="h-80 w-full ">
