@@ -9,13 +9,13 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  useEffect(()=>{
-    let localUser = JSON.parse(sessionStorage.getItem("user"))
-    if(localUser){
-      navigate('/')
-    }
+//   useEffect(()=>{
+//     let localUser = JSON.parse(sessionStorage.getItem("user"))
+//     if(localUser){
+//       navigate('/')
+//     }
 
-  })
+//   })
 
   const handleSubmit = async (e) => {
     e.preventDefault();
